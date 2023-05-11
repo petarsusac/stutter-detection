@@ -45,7 +45,6 @@
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths.927633475" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/stutter-detection/Application/Main/Inc}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/stutter-detection/Application/Preprocessing/Inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/stutter-detection/Application/X-CUBE-AI/Inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/stutter-detection/Drivers/BSP/Components/Common}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/stutter-detection/Drivers/BSP/STM32F7xx_Nucleo/Inc}&quot;"/>
@@ -60,6 +59,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/stutter-detection/Middleware/ST/STM32_USB_Device_Library/Class/AUDIO/Inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/stutter-detection/Middleware/ST/STM32_USB_Device_Library/Core/Inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/stutter-detection/Application/USB/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/stutter-detection/Application/Processing/Inc}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.470815481" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -96,7 +96,7 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
-						<entry excluding="Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_utils.c|Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_timebase_rtc_wakeup_template.c|Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_timebase_rtc_alarm_template.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_timebase_rtc_wakeup_template.c|Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_utils.c|Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_timebase_rtc_alarm_template.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

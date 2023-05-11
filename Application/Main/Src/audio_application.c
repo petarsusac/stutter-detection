@@ -22,7 +22,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "audio_application.h"
 
-#include "preprocessing.h"
+#include "processing.h"
 /** @addtogroup X_CUBE_MEMSMIC1_Applications
   * @{
   */
@@ -106,7 +106,7 @@ void AudioProcess(void)
   {
 	  single_channel[i] = (int16_t) PCM_Buffer[i * 2];
   }
-  preprocessing_copy_to_buffer(single_channel, single_channel_length);
+  processing_copy_to_buffer(single_channel, single_channel_length);
 
   Send_Audio_to_USB((int16_t *)PCM_Buffer, (AUDIO_IN_SAMPLING_FREQUENCY * N_MS / 1000)*AUDIO_IN_CHANNELS);
 }

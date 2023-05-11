@@ -4,8 +4,8 @@
 #include <stdint.h>
 #include <stddef.h>
 
-void preprocessing_init();
-int preprocessing_copy_to_buffer(int16_t *data, size_t len);
-void preprocessing_run();
+void processing_init();
+int processing_copy_to_buffer(int16_t *data, size_t len);
+void processing_run();
 
 #endif // PREPROCESSING_H

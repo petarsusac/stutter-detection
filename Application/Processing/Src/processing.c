@@ -1,4 +1,4 @@
-#include "preprocessing.h"
+#include "processing.h"
 
 #include <stdint.h>
 #include <string.h>
@@ -7,6 +7,7 @@
 #include <stdio.h>
 
 #include "ai.h"
+
 #include "mfcc.h"
 
 #define PREPROCESSING_BUFFER_SIZE (22000U)
@@ -44,13 +45,13 @@ static inline int16_t max_abs_value(int16_t *array, size_t len)
 	return max_abs;
 }
 
-void preprocessing_init()
+void processing_init()
 {
 	mfcc_init();
 	ai_init();
 }
 
-int preprocessing_copy_to_buffer(int16_t *data, size_t len)
+int processing_copy_to_buffer(int16_t *data, size_t len)
 {
 	if (preprocessing_buffer_index <= PREPROCESSING_BUFFER_SIZE - len)
 	{
@@ -66,7 +67,7 @@ int preprocessing_copy_to_buffer(int16_t *data, size_t len)
 	return 0;
 }
 
-void preprocessing_run()
+void processing_run()
 {
 	// Wait until buffer is filled
 	while (preprocessing_buffer_index < PREPROCESSING_BUFFER_SIZE);

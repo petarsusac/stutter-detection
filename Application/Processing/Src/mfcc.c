@@ -16,7 +16,8 @@
  *
  ******************************************************************************
  */
-#include "mfcc.h"
+#include "../../Processing/Inc/mfcc.h"
+
 #include "feature_extraction.h"
 /*
  * y = librosa.load('bus.wav', sr=None, duration=1)[0] # Keep native 16kHz sampling rate

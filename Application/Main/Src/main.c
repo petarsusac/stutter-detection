@@ -24,6 +24,7 @@
 #include "cube_hal.h"
 
 #include "preprocessing.h"
+#include "nucleo_uart.h"
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
@@ -89,6 +90,7 @@ int main(void)
   /* Start Device Process */
   USBD_Start(&hUSBDDevice);
 
+  nucleo_uart_init();
   preprocessing_init();
 
   /* Start audio acquisition and streaming */

@@ -4,6 +4,8 @@
 #include <string.h>
 #include "arm_math.h"
 
+#include <stdio.h>
+
 #include "ai.h"
 #include "mfcc.h"
 
@@ -107,4 +109,9 @@ void preprocessing_run()
 
 		processed_frames++;
 	}
+
+	printf("Processed frames: %d, positive frames: %d, %%SS estimate: %d\r\n",
+			processed_frames,
+			positive_frames,
+			(positive_frames * 100) / processed_frames);
 }

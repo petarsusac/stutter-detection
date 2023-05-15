@@ -16,7 +16,7 @@
  *
  ******************************************************************************
  */
-#include "../../Processing/Inc/mfcc.h"
+#include "mfcc.h"
 
 #include "feature_extraction.h"
 /*
@@ -31,6 +31,8 @@
 #define NUM_MELS       128U /* Number of mel bands */
 #define NUM_MEL_COEFS 2018U /* Number of mel filter weights. Returned by MelFilterbank_Init */
 #define NUM_MFCC        13U /* Number of MFCCs to return */
+
+#define GAIN (0.75)
 
 arm_rfft_fast_instance_f32 S_Rfft;
 MelFilterTypeDef           S_MelFilter;
@@ -123,6 +125,9 @@ void mfcc_run(int16_t *pInSignal, float32_t *pOutMfcc, uint32_t signal_len)
   for (uint32_t frame_index = 0; frame_index < num_frames; frame_index++)
   {
     buf_to_float_normed(&pInSignal[HOP_LEN * frame_index], pInFrame, FRAME_LEN);
+
+    arm_scale_f32(pInFrame, GAIN, pInFrame, FRAME_LEN);
+
     MfccColumn(&S_Mfcc, pInFrame, pOutColBuffer);
     /* Reshape column into pOutMfcc */
     for (uint32_t i = 0; i < NUM_MFCC; i++)

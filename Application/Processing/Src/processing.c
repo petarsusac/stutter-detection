@@ -13,7 +13,7 @@
 #define PREPROCESSING_BUFFER_SIZE (22000U)
 #define PADDING_LENGTH (2048 + 50)
 
-#define SILENCE_TRESHOLD (300)
+#define SILENCE_TRESHOLD (512)
 
 static int16_t preprocessing_buffer[PREPROCESSING_BUFFER_SIZE];
 static volatile size_t preprocessing_buffer_index = 0;
@@ -111,7 +111,7 @@ void processing_run()
 		processed_frames++;
 	}
 
-	printf("Processed frames: %d, positive frames: %d, %%SS estimate: %d\r\n",
+	printf("Processed frames: %d, positive frames: %d, %%SS estimate: %d%%\r\n",
 			processed_frames,
 			positive_frames,
 			(positive_frames * 100) / processed_frames);
